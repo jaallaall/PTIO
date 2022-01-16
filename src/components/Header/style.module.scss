@@ -1,0 +1,31 @@
+.header {
+    background-color: #404040;
+    min-height: var(--height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex: auto;
+    align-items: center;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    background-color: #4b4b4b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--height);
+    width: var(--width);
+    img {
+        height: 50px;
+    }
+}

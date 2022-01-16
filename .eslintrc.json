@@ -1,0 +1,132 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react-hooks",
+        "unused-imports"
+    ],
+    "rules": {
+        "@typescript-eslint/no-use-before-define": [
+            "error"
+        ],
+        "@typescript-eslint/no-shadow": [
+            "off"
+        ],
+        "@typescript-eslint/no-inferrable-types": 0,
+        "@typescript-eslint/explicit-function-return-type": [
+            "off",
+            {
+                "allowExpressions": true
+            }
+        ],
+        "react/jsx-key": "error",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react-hooks/rules-of-hooks": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/no-array-index-key": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
+        "react/jsx-curly-brace-presence": "off",
+        "react/no-unstable-nested-components":"off",
+        "react/function-component-definition":"off",
+        "react/button-has-type":"off",
+        "eslint no-return-assign":"off",
+        "react/jsx-filename-extension": [
+            "warn",
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ],
+        "no-shadow": "off",
+        "no-else-return": "off",
+        "no-unneeded-ternary": "off",
+        "no-nested-ternary": "off",
+        "no-plusplus": "off",
+        "no-unused-expressions": "off",
+        "no-case-declarations": "off",
+        "no-inferrable-types": 0,
+        "no-use-before-define": "off",
+        "no-param-reassign": "off",
+        "no-console": "off",
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "import/no-unresolved": 2,
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "prettier/prettier": [
+            "off",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "max-len": [
+            "warn",
+            {
+                "code": 150
+            }
+        ],
+        "object-shorthand": "off",
+        "prefer-template": "off",
+        "default-case": "off",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+        "import/order": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ],
+                "moduleDirectory": [
+                    "node_modules",
+                    "src/"
+                ]
+            }
+        }
+    }
+}

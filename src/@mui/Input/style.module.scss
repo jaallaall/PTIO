@@ -1,0 +1,53 @@
+.form-control {
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentcolor;
+    background-color: #fff;
+    background-clip: padding-box;
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0px;
+    width: 100%;
+    animation-name: mui-auto-fill-cancel;
+    animation-duration: 10ms;
+    padding: 16.5px 14px;
+    border: 1px solid #bcbcbc;
+    border-radius: 4px;
+}
+
+.select {
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentcolor;
+    background-color: #fff;
+    background-clip: padding-box;
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0px;
+    width: 100%;
+    animation-name: mui-auto-fill-cancel;
+    animation-duration: 10ms;
+    padding: 16.5px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+}
+
+.error {
+    color: var(--error-color);
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.form-control.red:focus-visible {
+    outline-color: var(--error-color);
+}
+.form-control.red::placeholder {
+    color: var(--error-color);
+}
+
+.red {
+    border-color: var(--error-color);
+}
