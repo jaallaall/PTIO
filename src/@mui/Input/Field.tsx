@@ -23,11 +23,7 @@ export const Field: React.FC<
 }): React.ReactElement => {
     return (
         <div className={className}>
-            {label && (
-                <span style={{ marginTop: name === 'gender' ? 0 : '' }}>
-                    {label}
-                </span>
-            )}
+            {label && <span>{label}</span>}
             <div>
                 <Controller
                     name={name}
