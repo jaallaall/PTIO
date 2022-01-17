@@ -7267,6 +7267,11 @@ react-is@^17.0.1, react-is@^17.0.2:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-loader-spinner@^5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-5.0.8.tgz#e451ed3be2c6b75fcb5cdba106d7ea03e6ed212f"
+  integrity sha512-VpX+RFRdEhrH3ju+NiLcN/Oryaw7ZquH6qFHkwXU0/yhgCjeDgqoq0C/pQD8m6F0Dm8SuVXovckDL/65YBjgcw==
+
 react-modern-calendar-datepicker@^3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/react-modern-calendar-datepicker/-/react-modern-calendar-datepicker-3.1.6.tgz#46b1533eb387a4d93ae8217eb30c26a4174a138f"
@@ -7394,6 +7399,13 @@ react-svg@^14.1.7:
     "@tanem/svg-injector" "^10.1.14"
     "@types/prop-types" "^15.7.4"
     prop-types "^15.8.1"
+
+react-toastify@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-8.1.0.tgz#acaca4e8c4415c8474562dd84a14e6f390ed7f17"
+  integrity sha512-M+Q3rTmEw/53Csr7NsV/YnldJe4c7uERcY7Tma9mvLU98QT2VhIkKwjBzzxZkJRk/oBKyUAtkyMjMgO00hx6gQ==
+  dependencies:
+    clsx "^1.1.1"
 
 react-transition-group@^4.3.0:
   version "4.4.2"

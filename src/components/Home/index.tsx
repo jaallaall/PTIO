@@ -6,6 +6,7 @@ import { useNewUser } from 'services/user'
 import style from './style.module.scss'
 // import 'react-modern-calendar-datepicker/lib/DatePicker.css'
 // import DatePicker from 'react-modern-calendar-datepicker'
+import { toast } from 'react-toastify'
 
 type Inputs = { [key: string]: FieldValues | undefined }
 
@@ -20,22 +21,46 @@ const data = [
     'user_status',
 ]
 
+const defualtValue: Options = {
+    username: '',
+    gender: 1,
+    linked_profile: '',
+    full_name: '',
+    designation: '',
+    branch_id: 0,
+    profile_id: 0,
+    login_day_left: 0,
+    role_list: [],
+    user_status: 1,
+}
+
 export default function App() {
-    const { mutate } = useNewUser()
+    const { mutate, isLoading } = useNewUser()
 
     const {
         control,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm<Inputs>()
 
     const onSubmit: SubmitHandler<Inputs> = (data: Options) => {
-        console.log(data)
-        mutate({
-            ...data,
-            gender: data.gender === 'male' ? '1' : '2',
-            role_list: data.role_list.map((item: Options) => item.value),
-        })
+        mutate(
+            {
+                ...data,
+                gender: data.gender === 'male' ? '1' : '2',
+                role_list: data.role_list.map((item: Options) => item.value),
+            },
+            {
+                onSuccess: (data) => {
+                    reset(defualtValue)
+                    toast(data.message, {
+                        position: toast.POSITION.BOTTOM_CENTER,
+                        progressClassName: 'progressToast',
+                    })
+                },
+            }
+        )
     }
 
     return (
@@ -172,7 +197,9 @@ export default function App() {
             /> */}
 
             <div className={style.button}>
-                <Button type="submit">Add</Button>
+                <Button type="submit" loading={isLoading}>
+                    Add
+                </Button>
             </div>
         </form>
     )

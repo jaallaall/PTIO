@@ -1,11 +1,19 @@
 import clsx from 'clsx'
 import style from './style.module.scss'
+import { Oval } from 'react-loader-spinner'
 
 export const Button: React.FC<{
     type?: 'button' | 'submit' | 'reset'
     className?: string
     color?: 'primary' | 'success' | 'info'
-}> = ({ type = 'button', className, children, color }): React.ReactElement => {
+    loading?: boolean
+}> = ({
+    type = 'button',
+    className,
+    children,
+    color,
+    loading,
+}): React.ReactElement => {
     const typeColor =
         color === 'primary'
             ? style.pirmary
@@ -20,6 +28,14 @@ export const Button: React.FC<{
             type={type}
             className={clsx(className, style.button, typeColor)}
         >
+            {loading && (
+                <Oval
+                    color="#fff"
+                    wrapperClass={style.loader}
+                    height={20}
+                    width={20}
+                />
+            )}
             {children}
         </button>
     )
