@@ -52,6 +52,8 @@
         "react/function-component-definition":"off",
         "react/button-has-type":"off",
         "eslint no-return-assign":"off",
+        "eslint guard-for-in:":"off",
+        "no-restricted-syntax":"off",
         "react/jsx-filename-extension": [
             "warn",
             {

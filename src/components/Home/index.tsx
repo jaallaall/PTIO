@@ -40,25 +40,36 @@ export default function App() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
-            {data.map((item, i) => (
-                <Field
-                    className={style.formGroup}
-                    label={item}
-                    key={i}
-                    name={item}
-                    control={control}
-                    errors={errors}
-                    required
-                    render={({ field }) => (
-                        <Input
-                            {...field}
-                            name={field.name}
-                            errors={errors}
-                            // placeholder={field.name}
-                        />
-                    )}
-                />
-            ))}
+            {data.map((item, i) => {
+                const isItem =
+                    item === 'username' ||
+                    item === 'full_name' ||
+                    item === 'designation' ||
+                    item === 'user_status' ||
+                    item === 'linked_profile'
+                        ? true
+                        : false
+                return (
+                    <Field
+                        className={style.formGroup}
+                        label={item}
+                        key={i}
+                        name={item}
+                        control={control}
+                        errors={errors}
+                        required
+                        render={({ field }) => (
+                            <Input
+                                {...field}
+                                name={field.name}
+                                errors={errors}
+                                // placeholder={field.name}
+                                type={isItem ? 'text' : 'number'}
+                            />
+                        )}
+                    />
+                )
+            })}
             <Field
                 name="role_list"
                 className={style.formGroup}
